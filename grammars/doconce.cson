@@ -475,6 +475,23 @@
     ]
   }
   {
+    'begin': '^(\!bc)\\s*py(.*)?\\s*$'
+    'beginCaptures':
+      '0':
+        'name': 'support.gfm'
+    'end': '^\!ec\\s*$'
+    'endCaptures':
+      '0':
+        'name': 'support.gfm'
+    'name': 'markup.code.python.gfm'
+    'contentName': 'source.python'
+    'patterns': [
+      {
+        'include': 'source.python'
+      }
+    ]
+  }
+  {
     'begin': '^\\s*([`~]{3,})\\s*c\\s*$'
     'beginCaptures':
       '0':

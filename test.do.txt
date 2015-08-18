@@ -42,6 +42,16 @@ __ Paragraph heading __
 
 Text
 
+```py
+for i in range(10, 100):
+    print "Waaa"
+```
+
+!bc pycod
+for i in range(10, 100):
+    print "Waaa"
+!ec
+
 # Markdown heading #
 
 This is *bold* and this is _underlined_
