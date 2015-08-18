@@ -1,6 +1,6 @@
-# GitHub flavored Markdown package [![Build Status](https://travis-ci.org/atom/language-gfm.svg?branch=master)](https://travis-ci.org/atom/language-gfm)
+# Atom syntax highlighting for Doconce #
 
-Adds syntax highlighting and snippets to [GitHub flavored Markdown](https://help.github.com/articles/github-flavored-markdown)
+Adds syntax highlighting and snippets to [Doconce](http://hplgit.github.io/doconce)
 files in Atom.
 
 Contributions are greatly appreciated. Please fork this repository and open a
