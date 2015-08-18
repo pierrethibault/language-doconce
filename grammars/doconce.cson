@@ -22,7 +22,7 @@
       '3':
         'name': 'keyword.control.import.include.doconce'
     'end': '(?=(?://|/\\*))|(?<!\\\\)(?=\\n)'
-    'name': 'meta.preprocessor.c.include'
+    'name': 'meta.preprocessor.doconce.include'
     'patterns': [
       {
         'match': '(?>\\\\\\s*\\n)'
