@@ -18,6 +18,8 @@ asdgsadg asdg asd gsadgasf asfasf
 safasf asfsa fasf asfasf asfasf asfasf saf asf
 This is other text
 
+# #include "something.do.txt"
+
 ========= Chapter =========
 
 Text

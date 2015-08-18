@@ -1,5 +1,6 @@
 {
   "name": "language-doconce",
+  "main": "./lib/doconce",
   "version": "0.2.1",
   "description": "Syntax highlighting and snippets for Doconce.",
   "repository": "https://github.com/ComputationalPhysics/language-doconce",
@@ -13,5 +14,13 @@
     "request": "^2.34.0",
     "season": "^5.0.2",
     "underscore-plus": "^1.0.6"
+  },
+  "providedServices": {
+    "code-links": {
+      "description": "Provides code links for Doconce files.",
+      "versions": {
+          "0.2.0": "provideLinks"
+      }
+    }
   }
 }

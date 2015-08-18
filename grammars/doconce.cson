@@ -6,6 +6,61 @@
 ]
 'patterns': [
   {
+    'match': '^(TITLE:|AUTHOR:|DATE:|TOC:|BIBFILE:).*$'
+    'captures':
+      '1':
+        'name': 'punctuation.definition.keyword.doconce'
+    'name': 'meta.definition.doconce'
+  }
+  {
+    'begin': '^\\s*(#)\\s*(#)\\s*(include|import)\\b\\s+'
+    'captures':
+      '1':
+        'name': 'punctuation.definition.keyword.doconce'
+      '2':
+        'name': 'punctuation.definition.keyword.doconce'
+      '3':
+        'name': 'keyword.control.import.include.doconce'
+    'end': '(?=(?://|/\\*))|(?<!\\\\)(?=\\n)'
+    'name': 'meta.preprocessor.c.include'
+    'patterns': [
+      {
+        'match': '(?>\\\\\\s*\\n)'
+        'name': 'punctuation.separator.continuation.doconce'
+      }
+      {
+        'begin': '"'
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.string.begin.doconce'
+        'end': '"'
+        'endCaptures':
+          '0':
+            'name': 'punctuation.definition.string.end.doconce'
+        'name': 'string.quoted.double.include.c'
+      }
+    ]
+  }
+  {
+    'begin': '(label)(\\{)'
+    'beginCaptures':
+      '1':
+        'name': 'punctuation.definition.keyword.doconce'
+      '2':
+        'name': 'punctuation.definition.arguments.begin.doconce'
+    'end': '(\\})'
+    'endCaptures':
+      '1':
+        'name': 'punctuation.definition.arguments.end.doconce'
+    'name': 'meta.definition.doconce'
+    'patterns': [
+      {
+        'match': '[a-zA-Z0-9\\.,:/*!^_-]'
+        'name': 'variable.parameter.definition.doconce'
+      }
+    ]
+  }
+  {
     'match': '\\\\.'
     'name': 'constant.character.escape.gfm'
   }
@@ -1051,5 +1106,9 @@
         'name': 'critic.gfm.substitution.operator'
       }
     ]
+  }
+  {
+    'match': '^#.*$'
+    'name': 'comment.block'
   }
 ]
