@@ -16,33 +16,59 @@ module.exports = new class Processor
 
     process: (source) ->
         links = []
+        labels = []
         for lineNum, line of source.split("\n")
             index = line.indexOf('#include')
             if index != -1
                 firstIndex = line.indexOf('\"')
                 lastIndex = line.lastIndexOf('\"')
                 links.push({
-                    fileName: line.substring(firstIndex+1, lastIndex)
+                    filename: line.substring(firstIndex+1, lastIndex)
                     range: [
                         [parseInt(lineNum), firstIndex+1],
                         [parseInt(lineNum), lastIndex]
                     ]
                     })
+            index = line.indexOf('label{')
+            if index != -1
+                firstIndex = line.indexOf('{')
+                lastIndex = line.lastIndexOf('}')
+                labels.push({
+                    label: line.substring(firstIndex+1, lastIndex)
+                    dest: [
+                        parseInt(lineNum) 
+                        firstIndex
+                    ]
+                    })
+        
+        for lineNum, line of source.split("\n")
+            index = line.indexOf('ref{')
+            if index != -1
+                firstIndex = line.indexOf('{')
+                lastIndex = line.lastIndexOf('}')
+                ref = line.substring(firstIndex+1, lastIndex)
+                for label in labels
+                    if ref == label.label     
+                        links.push({
+                            dest: label.dest
+                            range: [
+                                [parseInt(lineNum), firstIndex+1],
+                                [parseInt(lineNum), lastIndex]
+                            ]
+                            })
         return links
 
-    followLink: (srcFilename, { fileName }) ->
-        console.log("Follow link " + srcFilename)
-        console.log(fileName)
-        return fileName
+    followLink: (srcFilename, link) ->
+        console.log("Following link")
+        if link.fileName
+            return link.filename
+        return srcFilename
 
     scanForDestination: (source, marker) ->
-        for lineNum, line of source.split("\n")
-            if line.indexOf('module.exports') != -1
-                return [
-                    lineNum
-                    line.indexOf('module.exports')
-                ]
-        return undefined
+        return [
+            marker.dest[0] 
+            marker.dest[1]
+        ]
 
     # Attached to the object so it can be mocked for tests
     _resolve: (modulePath, options) ->
