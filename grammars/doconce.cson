@@ -46,14 +46,17 @@
   }
   {
     'begin': '^(\={9})(\\s*)'
-    'end': '(\={9})$'
+    'end': '(\\s*)(\={9})$'
     'name': 'markup.heading.heading-9.gfm'
-    'captures':
+    'beginCaptures':
       '1':
         'name': 'markup.heading.marker.gfm'
       '2':
         'name': 'markup.heading.space.gfm'
-      '3':
+    'endCaptures':
+      '1':
+        'name': 'markup.heading.space.gfm'
+      '2':
         'name': 'markup.heading.marker.gfm'
     'patterns': [
       {
@@ -63,14 +66,17 @@
   }
   {
     'begin': '^(\={7})(\\s*)'
-    'end': '(\={7})$'
+    'end': '(\\s*)(\={7})$'
     'name': 'markup.heading.heading-7.gfm'
-    'captures':
+    'beginCaptures':
       '1':
         'name': 'markup.heading.marker.gfm'
       '2':
         'name': 'markup.heading.space.gfm'
-      '3':
+    'endCaptures':
+      '1':
+        'name': 'markup.heading.space.gfm'
+      '2':
         'name': 'markup.heading.marker.gfm'
     'patterns': [
       {
@@ -80,14 +86,17 @@
   }
   {
     'begin': '^(\={5})(\\s*)'
-    'end': '(\={5})$'
+    'end': '(\\s*)(\={5})$'
     'name': 'markup.heading.heading-5.gfm'
-    'captures':
+    'beginCaptures':
       '1':
         'name': 'markup.heading.marker.gfm'
       '2':
         'name': 'markup.heading.space.gfm'
-      '3':
+    'endCaptures':
+      '1':
+        'name': 'markup.heading.space.gfm'
+      '2':
         'name': 'markup.heading.marker.gfm'
     'patterns': [
       {
@@ -97,14 +106,17 @@
   }
   {
     'begin': '^(\={3})(\\s*)'
-    'end': '(\={3})$'
+    'end': '(\\s*)(\={3})$'
     'name': 'markup.heading.heading-3.gfm'
-    'captures':
+    'beginCaptures':
       '1':
         'name': 'markup.heading.marker.gfm'
       '2':
         'name': 'markup.heading.space.gfm'
-      '3':
+    'endCaptures':
+      '1':
+        'name': 'markup.heading.space.gfm'
+      '2':
         'name': 'markup.heading.marker.gfm'
     'patterns': [
       {
@@ -114,14 +126,17 @@
   }
   {
     'begin': '^(\_{2})(\\s*)'
-    'end': '(\_{2})$'
+    'end': '(\\s*)(\_{2})$'
     'name': 'markup.heading.heading-2.gfm'
-    'captures':
+    'beginCaptures':
       '1':
         'name': 'markup.heading.marker.gfm'
       '2':
         'name': 'markup.heading.space.gfm'
-      '3':
+    'endCaptures':
+      '1':
+        'name': 'markup.heading.space.gfm'
+      '2':
         'name': 'markup.heading.marker.gfm'
     'patterns': [
       {
