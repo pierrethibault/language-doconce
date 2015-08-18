@@ -1,5 +1,5 @@
 'name': 'Doconce'
-'scopeName': 'source.gfm'
+'scopeName': 'source.doconce'
 'fileTypes': [
   'do.txt'
   'do'
@@ -102,7 +102,7 @@
   {
     'begin': '^(\={9})(\\s*)'
     'end': '(\\s*)(\={9})$'
-    'name': 'markup.heading.heading-9.gfm'
+    'name': 'markup.heading.doconce punctuation.definition.heading.doconce'
     'beginCaptures':
       '1':
         'name': 'markup.heading.marker.gfm'
@@ -122,7 +122,7 @@
   {
     'begin': '^(\={7})(\\s*)'
     'end': '(\\s*)(\={7})$'
-    'name': 'markup.heading.heading-7.gfm'
+    'name': 'markup.heading.doconce punctuation.definition.heading.doconce'
     'beginCaptures':
       '1':
         'name': 'markup.heading.marker.gfm'
@@ -142,7 +142,7 @@
   {
     'begin': '^(\={5})(\\s*)'
     'end': '(\\s*)(\={5})$'
-    'name': 'markup.heading.heading-5.gfm'
+    'name': 'markup.heading.doconce punctuation.definition.heading.doconce'
     'beginCaptures':
       '1':
         'name': 'markup.heading.marker.gfm'
@@ -162,7 +162,7 @@
   {
     'begin': '^(\={3})(\\s*)'
     'end': '(\\s*)(\={3})$'
-    'name': 'markup.heading.heading-3.gfm'
+    'name': 'markup.heading.doconce punctuation.definition.heading.doconce'
     'beginCaptures':
       '1':
         'name': 'markup.heading.marker.gfm'
@@ -182,7 +182,7 @@
   {
     'begin': '^(\_{2})(\\s*)'
     'end': '(\\s*)(\_{2})$'
-    'name': 'markup.heading.heading-2.gfm'
+    'name': 'markup.heading.doconce punctuation.definition.heading.doconce'
     'beginCaptures':
       '1':
         'name': 'markup.heading.marker.gfm'

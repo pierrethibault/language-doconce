@@ -11,7 +11,7 @@ module.exports = new class Processor
         require('./processor')
 
     scopes: [
-        'source.gfm'
+        'source.doconce'
     ]
 
     process: (source) ->
