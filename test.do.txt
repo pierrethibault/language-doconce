@@ -47,9 +47,13 @@ for i in range(10, 100):
     print "Waaa"
 ```
 
-!bc pycod
+!bcpypro
 for i in range(10, 100):
     print "Waaa"
+!ec
+
+!bc
+some code
 !ec
 
 # Markdown heading #

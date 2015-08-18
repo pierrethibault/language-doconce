@@ -207,11 +207,11 @@
     'begin': '^\\s*[`~]{3,}\\s*coffee-?(script)?\\s*$'
     'beginCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'end': '^\\s*[`~]{3,}$'
     'endCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'name': 'markup.code.coffee.gfm'
     'contentName': 'source.coffee'
     'patterns': [
@@ -224,11 +224,11 @@
     'begin': '^\\s*([`~]{3,})\\s*(javascript|js)\\s*$'
     'beginCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'end': '^\\s*\\1\\s*$'
     'endCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'name': 'markup.code.js.gfm'
     'contentName': 'source.js'
     'patterns': [
@@ -241,11 +241,11 @@
     'begin': '^\\s*([`~]{3,})\\s*(markdown|mdown|md)\\s*$'
     'beginCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'end': '^\\s*\\1\\s*$'
     'endCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'name': 'markup.code.gfm'
     'patterns': [
       {
@@ -257,11 +257,11 @@
     'begin': '^\\s*([`~]{3,})\\s*json\\s*$'
     'beginCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'end': '^\\s*\\1\\s*$'
     'endCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'name': 'markup.code.json.gfm'
     'contentName': 'source.json'
     'patterns': [
@@ -274,11 +274,11 @@
     'begin': '^\\s*([`~]{3,})\\s*css\\s*$'
     'beginCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'end': '^\\s*\\1\\s*$'
     'endCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'name': 'markup.code.css.gfm'
     'contentName': 'source.css'
     'patterns': [
@@ -291,11 +291,11 @@
     'begin': '^\\s*([`~]{3,})\\s*less\\s*$'
     'beginCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'end': '^\\s*\\1\\s*$'
     'endCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'name': 'markup.code.less.gfm'
     'contentName': 'source.css.less'
     'patterns': [
@@ -308,11 +308,11 @@
     'begin': '^\\s*([`~]{3,})\\s*xml\\s*$'
     'beginCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'end': '^\\s*\\1\\s*$'
     'endCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'name': 'markup.code.xml.gfm'
     'contentName': 'text.xml'
     'patterns': [
@@ -325,11 +325,11 @@
     'begin': '^\\s*([`~]{3,})\\s*(ruby|rb)\\s*$'
     'beginCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'end': '^\\s*\\1\\s*$'
     'endCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'name': 'markup.code.ruby.gfm'
     'contentName': 'source.ruby'
     'patterns': [
@@ -342,11 +342,11 @@
     'begin': '^\\s*([`~]{3,})\\s*(rust|rs)\\s*$'
     'beginCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'end': '^\\s*\\1\\s*$'
     'endCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'name': 'markup.code.rust.gfm'
     'contentName': 'source.rust'
     'patterns': [
@@ -359,11 +359,11 @@
     'begin': '^\\s*([`~]{3,})\\s*java\\s*$'
     'beginCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'end': '^\\s*\\1\\s*$'
     'endCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'name': 'markup.code.java.gfm'
     'contentName': 'source.java'
     'patterns': [
@@ -376,11 +376,11 @@
     'begin': '^\\s*([`~]{3,})\\s*erlang\\s*$'
     'beginCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'end': '^\\s*\\1\\s*$'
     'endCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'name': 'markup.code.erlang.gfm'
     'contentName': 'source.erlang'
     'patterns': [
@@ -393,11 +393,11 @@
     'begin': '^\\s*([`~]{3,})\\s*go(lang)?\\s*$'
     'beginCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'end': '^\\s*\\1\\s*$'
     'endCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'name': 'markup.code.go.gfm'
     'contentName': 'source.go'
     'patterns': [
@@ -410,11 +410,11 @@
     'begin': '^\\s*([`~]{3,})\\s*cs(harp)?\\s*$'
     'beginCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'end': '^\\s*\\1\\s*$'
     'endCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'name': 'markup.code.cs.gfm'
     'contentName': 'source.cs'
     'patterns': [
@@ -427,11 +427,11 @@
     'begin': '^\\s*([`~]{3,})\\s*php\\s*$'
     'beginCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'end': '^\\s*\\1\\s*$'
     'endCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'name': 'markup.code.php.gfm'
     'contentName': 'source.php'
     'patterns': [
@@ -444,11 +444,11 @@
     'begin': '^\\s*([`~]{3,})\\s*(sh|bash)\\s*$'
     'beginCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'end': '^\\s*\\1\\s*$'
     'endCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'name': 'markup.code.shell.gfm'
     'contentName': 'source.shell'
     'patterns': [
@@ -461,11 +461,11 @@
     'begin': '^\\s*([`~]{3,})\\s*py(thon)?\\s*$'
     'beginCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'end': '^\\s*\\1\\s*$'
     'endCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'name': 'markup.code.python.gfm'
     'contentName': 'source.python'
     'patterns': [
@@ -478,11 +478,11 @@
     'begin': '^(\!bc)\\s*py(.*)?\\s*$'
     'beginCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'end': '^\!ec\\s*$'
     'endCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'name': 'markup.code.python.gfm'
     'contentName': 'source.python'
     'patterns': [
@@ -495,11 +495,11 @@
     'begin': '^\\s*([`~]{3,})\\s*c\\s*$'
     'beginCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'end': '^\\s*\\1\\s*$'
     'endCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'name': 'markup.code.c.gfm'
     'contentName': 'source.c'
     'patterns': [
@@ -512,11 +512,11 @@
     'begin': '^\\s*([`~]{3,})\\s*c(pp|\\+\\+)\\s*$'
     'beginCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'end': '^\\s*\\1\\s*$'
     'endCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'name': 'markup.code.cpp.gfm'
     'contentName': 'source.cpp'
     'patterns': [
@@ -529,11 +529,11 @@
     'begin': '^\\s*([`~]{3,})\\s*(objc|objective-c)\\s*$'
     'beginCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'end': '^\\s*\\1\\s*$'
     'endCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'name': 'markup.code.objc.gfm'
     'contentName': 'source.objc'
     'patterns': [
@@ -546,11 +546,11 @@
     'begin': '^\\s*([`~]{3,})\\s*swift\\s*$'
     'beginCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'end': '^\\s*\\1\\s*$'
     'endCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'name': 'markup.code.swift.gfm'
     'contentName': 'source.swift'
     'patterns': [
@@ -563,11 +563,11 @@
     'begin': '^\\s*([`~]{3,})\\s*html\\s*$'
     'beginCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'end': '^\\s*\\1\\s*$'
     'endCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'name': 'markup.code.html.gfm'
     'contentName': 'source.html.basic'
     'patterns': [
@@ -580,11 +580,11 @@
     'begin': '^\\s*([`~]{3,})\\s*ya?ml\\s*$'
     'beginCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'end': '^\\s*\\1\\s*$'
     'endCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'name': 'markup.code.yaml.gfm'
     'contentName': 'source.yaml'
     'patterns': [
@@ -597,11 +597,11 @@
     'begin': '^\\s*([`~]{3,})\\s*elixir\\s*$'
     'beginCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'end': '^\\s*\\1\\s*$'
     'endCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'name': 'markup.code.elixir.gfm'
     'contentName': 'source.elixir'
     'patterns': [
@@ -614,11 +614,11 @@
     'begin': '^\\s*([`~]{3,})\\s*(diff|patch|rej)\\s*$'
     'beginCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'end': '^\\s*\\1\\s*$'
     'endCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'name': 'markup.code.diff.gfm'
     'contentName': 'source.diff'
     'patterns': [
@@ -631,11 +631,11 @@
     'begin': '^\\s*([`~]{3,})\\s*julia\\s*$'
     'beginCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'end': '^\\s*\\1\\s*$'
     'endCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'name': 'markup.code.julia.gfm'
     'contentName': 'source.julia'
     'patterns': [
@@ -648,11 +648,11 @@
     'begin': '^\\s*([`~]{3,})\\s*r\\s*$'
     'beginCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'end': '^\\s*\\1\\s*$'
     'endCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'name': 'markup.code.r.gfm'
     'contentName': 'source.r'
     'patterns': [
@@ -665,11 +665,11 @@
     'begin': '^\\s*([`~]{3,})\\s*haskell\\s*$'
     'beginCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'end': '^\\s*\\1\\s*$'
     'endCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'name': 'markup.code.haskell.gfm'
     'contentName': 'source.haskell'
     'patterns': [
@@ -682,11 +682,11 @@
     'begin': '^\\s*([`~]{3,})\\s*elm\\s*$'
     'beginCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'end': '^\\s*\\1\\s*$'
     'endCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'name': 'markup.code.elm.gfm'
     'contentName': 'source.elm'
     'patterns': [
@@ -699,11 +699,11 @@
     'begin': '^\\s*([`~]{3,})\\s*(apib|apiblueprint)\\s*$'
     'beginCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'end': '^\\s*\\1\\s*$'
     'endCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'name': 'markup.code.gfm'
     'patterns': [
       {
@@ -715,11 +715,11 @@
     'begin': '^\\s*([`~]{3,})\\s*mson\\s*$'
     'beginCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'end': '^\\s*\\1\\s*$'
     'endCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'name': 'markup.code.gfm'
     'patterns': [
       {
@@ -731,11 +731,11 @@
     'begin': '^\\s*([`~]{3,})\\s*sql\\s*$'
     'beginCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'end': '^\\s*\\1\\s*$'
     'endCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'name': 'markup.code.sql.gfm'
     'contentName': 'source.sql'
     'patterns': [
@@ -748,11 +748,11 @@
     'begin': '^\\s*([`~]{3,})\\s*clojure\\s*$'
     'beginCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'end': '^\\s*\\1\\s*$'
     'endCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'name': 'markup.code.clojure.gfm'
     'contentName': 'source.clojure'
     'patterns': [
@@ -765,11 +765,22 @@
     'begin': '^\\s*([`~]{3,}).*$'
     'beginCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
     'end': '^\\s*\\1\\s*$'
     'endCaptures':
       '0':
-        'name': 'support.gfm'
+        'name': 'entity.name.tag.block.any.doconce'
+    'name': 'markup.raw.gfm'
+  },
+  {
+    'begin': '(!bc.*)$'
+    'beginCaptures':
+      '0':
+        'name': 'entity.name.tag.block.any.doconce'
+    'end': '^(!ec)$'
+    'endCaptures':
+      '0':
+        'name': 'entity.name.tag.block.any.doconce'
     'name': 'markup.raw.gfm'
   }
   {
