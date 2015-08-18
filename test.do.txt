@@ -1,0 +1,83 @@
+# Something else #
+
+require("test")
+
+# Headings y'all #
+
+<p>html is awesome and not</p>
+asf asfas fasf saf asasf asf
+Some stashas
+sadgasdg sagdsa gasdgdasg as
+Woopdie dosadgo asasdfasd fasdg asdgsadg dsag asdg
+asdgsadg asdg asd gsadgasf asfasf
+
+========= Headings y'all =========
+
+== Test me ==
+
+safasf asfsa fasf asfasf asfasf asfasf saf asf
+This is other text
+
+========= Chapter =========
+
+Text
+
+======= Section =======
+
+Text
+
+======= Section wrong =======
+
+Text
+
+===== Subsection =====
+
+Text
+
+=== Subsubsection ===
+
+Text
+
+__ Paragraph heading __
+
+Text
+
+# Markdown heading #
+
+This is *bold* and this is _underlined_
+
+What cool stuff!
+
+"This is link":something.html
+
+something.html:"This is link"
+
+[Some link](http://cinpla.org)
+
+
+
+¤ Heading ¤
+
+# comment \n
+
+And more text
+
+and the # comment start's here
+
+that is fine
+
+but the  heading = cannot start here =
+
+<% preprocessor stuff %>
+
+before <% test
+kake
+multiline preprocessor stuff
+%> done
+
+Some new stuff
+
+= Multiline
+Heading =
+
+<h1 test=10 woop=100>bananas</h1>
