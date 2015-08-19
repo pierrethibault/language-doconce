@@ -59,8 +59,7 @@ module.exports = new class Processor
         return links
 
     followLink: (srcFilename, link) ->
-        console.log("Following link")
-        if link.fileName
+        if link.filename
             return link.filename
         return srcFilename
 
