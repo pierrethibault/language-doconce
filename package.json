@@ -1,7 +1,7 @@
 {
   "name": "language-doconce",
   "main": "./lib/doconce",
-  "version": "0.2.11",
+  "version": "0.2.12",
   "description": "Syntax highlighting and snippets for Doconce.",
   "repository": "https://github.com/ComputationalPhysics/language-doconce",
   "license": "MIT",
