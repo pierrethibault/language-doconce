@@ -15,6 +15,9 @@
     "season": "^5.0.2",
     "underscore-plus": "^1.0.6"
   },
+  "dependencies": {
+    "underscore-plus": "^1.6.6"
+  },
   "providedServices": {
     "code-links": {
       "description": "Provides code links for Doconce files.",
