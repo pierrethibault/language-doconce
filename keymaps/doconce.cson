@@ -1,0 +1,5 @@
+'.platform-darwin atom-text-editor[data-grammar="source doconce"]':
+  'alt-cmd-q': 'doconce:reflow-selection'
+
+'.platform-win32 atom-text-editor[data-grammar="source doconce"], .platform-linux atom-text-editor[data-grammar="source doconce"]':
+  'alt-ctrl-q': 'doconce:reflow-selection'
