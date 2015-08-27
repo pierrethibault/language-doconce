@@ -549,6 +549,17 @@
     ]
   }
   {
+    'begin': '^(\!b.*\\w).*$'
+    'beginCaptures':
+      '0':
+        'name': 'entity.name.tag.block.any.doconce'
+    'end': '^\!e.*\\w\\s*$'
+    'endCaptures':
+      '0':
+        'name': 'entity.name.tag.block.any.doconce'
+    'name': 'markup.quote.doconce'
+  }
+  {
     'begin': '^(\!bc)\\s*py(.*)?\\s*$'
     'beginCaptures':
       '0':
