@@ -48,7 +48,7 @@ module.exports =
           foundPeriod = false
         if foundPeriod
           wrapNext = true
-        if /\.|\?|\!/.test(segment)
+        if /(\.|\?|\!)$/.test(segment)
           foundPeriod = true
         currentLine.push(segment)
         currentLineLength += segment.length
