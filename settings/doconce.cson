@@ -1,5 +1,4 @@
-'.source.doconce:not(.markup.code)':
+'.source.doconce':
   'editor':
     'softWrap': true
-    'commentStart': '<!-- '
-    'commentEnd': ' -->'
+    'commentStart': '# '

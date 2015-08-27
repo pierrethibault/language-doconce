@@ -39,8 +39,13 @@ module.exports =
 
       foundPeriod = false
       wrapNext = false
+      insideComment = false
       for segment in @segmentText(blockLines.join(' '))
-        if @wrapSegment(segment, currentLineLength, wrapColumn) or wrapNext
+        if /^\[/.test(segment)
+          insideComment = true
+        if /\]$/.test(segment)
+          insideComment = false
+        if @wrapSegment(segment, currentLineLength, wrapColumn) or /^\[/.test(segment) or wrapNext
           lines.push(linePrefix + currentLine.join(''))
           currentLine = []
           currentLineLength = linePrefix.length
@@ -48,7 +53,12 @@ module.exports =
           foundPeriod = false
         if foundPeriod
           wrapNext = true
-        if /(\.|\?|\!)$/.test(segment)
+        # wrap next segment if this contains a strong delimiter
+        if /(\.|\?|\!|\:|\;|\])$/.test(segment) and not insideComment
+          foundPeriod = true
+        # wrap next segment if this contains a weak delimiter and is past half
+        # the length of the line
+        if /(,)$/.test(segment) and @wrapSegment(segment, currentLineLength * 2.0, wrapColumn)
           foundPeriod = true
         currentLine.push(segment)
         currentLineLength += segment.length

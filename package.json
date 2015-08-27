@@ -16,7 +16,9 @@
     "underscore-plus": "^1.0.6"
   },
   "dependencies": {
-    "underscore-plus": "^1.6.6"
+    "underscore-plus": "^1.6.6",
+    "language-latex": "^0.6.1",
+    "code-links": "^0.2.0"
   },
   "providedServices": {
     "code-links": {

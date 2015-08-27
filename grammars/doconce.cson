@@ -557,13 +557,41 @@
     'endCaptures':
       '0':
         'name': 'entity.name.tag.block.any.doconce'
-    'name': 'markup.code.python.gfm'
+    'name': 'markup.code.python.doconce'
     'contentName': 'source.python'
     'patterns': [
       {
         'include': 'source.python'
       }
     ]
+  }
+  {
+    'begin': '^(\!bt).*$'
+    'beginCaptures':
+      '0':
+        'name': 'entity.name.tag.block.any.doconce'
+    'end': '^\!et\\s*$'
+    'endCaptures':
+      '0':
+        'name': 'entity.name.tag.block.any.doconce'
+    'name': 'markup.code.latex.doconce'
+    'contentName': 'text.tex.latex'
+    'patterns': [
+      {
+        'include': 'text.tex.latex'
+      }
+    ]
+  }
+  {
+    'begin': '^(\!bquote).*$'
+    'beginCaptures':
+      '0':
+        'name': 'entity.name.tag.block.any.doconce'
+    'end': '^\!equote\\s*$'
+    'endCaptures':
+      '0':
+        'name': 'entity.name.tag.block.any.doconce'
+    'name': 'markup.quote.doconce'
   }
   {
     'begin': '^\\s*([`~]{3,})\\s*c\\s*$'
