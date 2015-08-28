@@ -40,29 +40,52 @@ module.exports =
       foundPeriod = false
       wrapNext = false
       insideComment = false
-      for segment in @segmentText(blockLines.join(' '))
-        if /^\[/.test(segment)
-          insideComment = true
-        if /\]$/.test(segment)
-          insideComment = false
-        if @wrapSegment(segment, currentLineLength, wrapColumn) or /^\[/.test(segment) or wrapNext
-          lines.push(linePrefix + currentLine.join(''))
-          currentLine = []
-          currentLineLength = linePrefix.length
-          wrapNext = false
-          foundPeriod = false
-        if foundPeriod
-          wrapNext = true
-        # wrap next segment if this contains a strong delimiter
-        if /(\.|\?|\!|\:|\;|\])$/.test(segment) and not insideComment
-          foundPeriod = true
-        # wrap next segment if this contains a weak delimiter and is past half
-        # the length of the line
-        if /(,)$/.test(segment) and @wrapSegment(segment, currentLineLength * 2.0, wrapColumn)
-          foundPeriod = true
-        currentLine.push(segment)
-        currentLineLength += segment.length
-      lines.push(linePrefix + currentLine.join(''))
+      insideEnvironment = false
+      lineCount = blockLines.length
+      lineNumber = 0
+      for line in blockLines
+        if /^\!b/.test(line)
+          insideEnvironment = true
+        if /^\!e/.test(line)
+          insideEnvironment = false
+        if /^\!(b|e)/.test(line) or /^#include/.test(line) or /^(TITLE|AUTHOR|DATE): /.test(line) or /^\s*=====/.test(line) or insideEnvironment
+          if currentLineLength > 0
+            lines.push(linePrefix + currentLine.join(''))
+            currentLine = []
+            currentLineLength = linePrefix.length
+            wrapNext = false
+            foundPeriod = false
+          lines.push(linePrefix + line)
+        else
+          if lineNumber == lineCount - 1 or /^\s*$/.test(line)
+            suffix = ''
+          else
+            suffix = ' '
+          for segment in @segmentText(line + suffix)
+            if /^\[/.test(segment)
+              insideComment = true
+            if /\]$/.test(segment)
+              insideComment = false
+            if @wrapSegment(segment, currentLineLength, wrapColumn) or /^\[/.test(segment) or wrapNext
+              lines.push(linePrefix + currentLine.join(''))
+              currentLine = []
+              currentLineLength = linePrefix.length
+              wrapNext = false
+              foundPeriod = false
+            if foundPeriod
+              wrapNext = true
+            # wrap next segment if this contains a strong delimiter
+            if /(\.|\?|\!|\:|\;|\])$/.test(segment) and not insideComment
+              foundPeriod = true
+            # wrap next segment if this contains a weak delimiter and is past half
+            # the length of the line
+            if /(,)$/.test(segment) and @wrapSegment(segment, currentLineLength * 2.0, wrapColumn)
+              foundPeriod = true
+            currentLine.push(segment)
+            currentLineLength += segment.length
+        lineNumber += 1
+      if currentLineLength > 0
+        lines.push(linePrefix + currentLine.join(''))
 
       paragraphs.push(lines.join('\n').replace(/\s+\n/g, '\n'))
 
