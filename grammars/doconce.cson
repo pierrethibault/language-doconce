@@ -594,7 +594,7 @@
     'name': 'markup.quote.doconce'
   }
   {
-    'begin': '^(\!b[a-zA-Z0-9:-]*) (.*)$'
+    'begin': '^(\!b[a-zA-Z0-9:-]*)( ?.*)$'
     'beginCaptures':
       '1':
         'name': 'entity.name.tag.block.any.doconce'
