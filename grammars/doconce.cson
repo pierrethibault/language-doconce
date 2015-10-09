@@ -549,7 +549,7 @@
     ]
   }
   {
-    'begin': '^(\!bc)\\s*py(.*)?\\s*$'
+    'begin': '^(\!bc)\\s*i?py(.*)?\\s*$'
     'beginCaptures':
       '0':
         'name': 'entity.name.tag.block.any.doconce'
@@ -592,6 +592,17 @@
       '0':
         'name': 'entity.name.tag.block.any.doconce'
     'name': 'markup.quote.doconce'
+  }
+  {
+    'begin': '(!bc.*)$'
+    'beginCaptures':
+      '0':
+        'name': 'entity.name.tag.block.any.doconce'
+    'end': '^(!ec)$'
+    'endCaptures':
+      '0':
+        'name': 'entity.name.tag.block.any.doconce'
+    'name': 'markup.raw.gfm'
   }
   {
     'begin': '^(\!b[a-zA-Z0-9:-]*)( ?.*)$'
@@ -885,17 +896,6 @@
       '0':
         'name': 'entity.name.tag.block.any.doconce'
     'end': '^\\s*\\1\\s*$'
-    'endCaptures':
-      '0':
-        'name': 'entity.name.tag.block.any.doconce'
-    'name': 'markup.raw.gfm'
-  },
-  {
-    'begin': '(!bc.*)$'
-    'beginCaptures':
-      '0':
-        'name': 'entity.name.tag.block.any.doconce'
-    'end': '^(!ec)$'
     'endCaptures':
       '0':
         'name': 'entity.name.tag.block.any.doconce'
