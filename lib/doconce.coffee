@@ -1,4 +1,5 @@
 _ = require 'underscore-plus'
+path = require 'path'
 
 module.exports =  
   activate: ->
@@ -48,7 +49,7 @@ module.exports =
           insideEnvironment = true
         if /^\!e/.test(line)
           insideEnvironment = false
-        if /^\!(b|e)/.test(line) or /^#include/.test(line) or /^(TITLE|AUTHOR|DATE): /.test(line) or /^\s*=====/.test(line) or insideEnvironment
+        if /^\!(b|e)/.test(line) or /^#include/.test(line) or /^(TITLE|AUTHOR|DATE|FIGURE): /.test(line) or /^\s*=====/.test(line) or insideEnvironment
           if currentLineLength > 0
             lines.push(linePrefix + currentLine.join(''))
             currentLine = []
@@ -104,7 +105,15 @@ module.exports =
     re = /[\s]+|[^\s]+/g
     segments.push(match[0]) while match = re.exec(text)
     segments
-
-
-  provideLinks: ->
-      require('./processor')
+    
+  getProvider: ->
+    providerName: 'doconce-hyperclick',
+    wordRegExp: /# #include "(.*)"/,
+    getSuggestionForWord: (textEditor, text, range) ->
+      range: range, 
+      callback: ->
+        basedir = path.dirname(textEditor.getPath());
+        filename = text.replace(/# #include "(.*)"/, '$1')
+        detail = 'lol'
+        atom.notifications.addInfo 'Hyperclick provider demo', detail: detail
+        atom.workspace.open path.resolve(basedir, filename)

@@ -20,13 +20,12 @@
   },
   "package-dependencies": {
     "language-latex": "^0.6.1",
-    "code-links": "^0.2.0"
+    "hyperclick": "^0.0.35"
   },
   "providedServices": {
-    "code-links": {
-      "description": "Provides code links for Doconce files.",
+    "hyperclick.provider": {
       "versions": {
-        "0.2.0": "provideLinks"
+        "0.0.0": "getProvider"
       }
     }
   }
