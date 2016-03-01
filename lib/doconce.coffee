@@ -114,6 +114,4 @@ module.exports =
       callback: ->
         basedir = path.dirname(textEditor.getPath());
         filename = text.replace(/# #include "(.*)"/, '$1')
-        detail = 'lol'
-        atom.notifications.addInfo 'Hyperclick provider demo', detail: detail
         atom.workspace.open path.resolve(basedir, filename)
