@@ -86,22 +86,22 @@
   {
     'begin': '(?<=^|[^\\w\\d\\*])_\\*(?!$|\\*|\\s)'
     'end': '(?<!^|\\s)\\*_(?=$|[^\\w|\\d])'
-    'name': 'markup.bold.italic.gfm'
+    'name': 'markup.bold.italic.doconce'
   }
   {
     'begin': '(?<=^|[^\\w\\d_])\\*_(?!$|_|\\s)'
     'end': '(?<!^|\\s)_\\*(?=$|[^\\w|\\d])'
-    'name': 'markup.bold.italic.gfm'
+    'name': 'markup.bold.italic.doconce'
   }
   {
     'begin': '(?<=^|[^\\w\\d_\\{\\}])_(?!$|_|\\s)'
     'end': '(?<!^|\\s)_*_(?=$|[^\\w|\\d])'
-    'name': 'markup.bold.gfm'
+    'name': 'markup.bold.doconce'
   }
   {
     'begin': '(?<=^|[^\\w\\d\\*])\\*(?!$|\\*|\\s)'
     'end': '(?<!^|\\s)\\**\\*(?=$|[^\\w|\\d])'
-    'name': 'markup.italic.gfm'
+    'name': 'markup.italic.doconce'
   }
   {
     'begin': '(?<=^|[^\\w\\d~])~~(?!$|~|\\s)'
