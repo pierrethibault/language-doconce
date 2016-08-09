@@ -104,24 +104,19 @@
     'name': 'markup.italic.doconce'
   }
   {
-    'begin': '(?<=^|[^\\w\\d~])~~(?!$|~|\\s)'
-    'end': '(?<!^|\\s)~~*~(?=$|[^\\w|\\d])'
-    'name': 'markup.strike.gfm'
-  }
-  {
     'begin': '^(\={9})(\\s*)'
     'end': '(\\s*)(\={9})$'
     'name': 'markup.heading.doconce punctuation.definition.heading.doconce'
     'beginCaptures':
       '1':
-        'name': 'markup.heading.marker.gfm'
+        'name': 'markup.heading.marker.doconce'
       '2':
-        'name': 'markup.heading.space.gfm'
+        'name': 'markup.heading.space.doconce'
     'endCaptures':
       '1':
-        'name': 'markup.heading.space.gfm'
+        'name': 'markup.heading.space.doconce'
       '2':
-        'name': 'markup.heading.marker.gfm'
+        'name': 'markup.heading.marker.doconce'
     'patterns': [
       {
         'include': '$self'
@@ -134,14 +129,14 @@
     'name': 'markup.heading.doconce punctuation.definition.heading.doconce'
     'beginCaptures':
       '1':
-        'name': 'markup.heading.marker.gfm'
+        'name': 'markup.heading.marker.doconce'
       '2':
-        'name': 'markup.heading.space.gfm'
+        'name': 'markup.heading.space.doconce'
     'endCaptures':
       '1':
-        'name': 'markup.heading.space.gfm'
+        'name': 'markup.heading.space.doconce'
       '2':
-        'name': 'markup.heading.marker.gfm'
+        'name': 'markup.heading.marker.doconce'
     'patterns': [
       {
         'include': '$self'
@@ -154,14 +149,14 @@
     'name': 'markup.heading.doconce punctuation.definition.heading.doconce'
     'beginCaptures':
       '1':
-        'name': 'markup.heading.marker.gfm'
+        'name': 'markup.heading.marker.doconce'
       '2':
-        'name': 'markup.heading.space.gfm'
+        'name': 'markup.heading.space.doconce'
     'endCaptures':
       '1':
-        'name': 'markup.heading.space.gfm'
+        'name': 'markup.heading.space.doconce'
       '2':
-        'name': 'markup.heading.marker.gfm'
+        'name': 'markup.heading.marker.doconce'
     'patterns': [
       {
         'include': '$self'
@@ -174,14 +169,14 @@
     'name': 'markup.heading.doconce punctuation.definition.heading.doconce'
     'beginCaptures':
       '1':
-        'name': 'markup.heading.marker.gfm'
+        'name': 'markup.heading.marker.doconce'
       '2':
-        'name': 'markup.heading.space.gfm'
+        'name': 'markup.heading.space.doconce'
     'endCaptures':
       '1':
-        'name': 'markup.heading.space.gfm'
+        'name': 'markup.heading.space.doconce'
       '2':
-        'name': 'markup.heading.marker.gfm'
+        'name': 'markup.heading.marker.doconce'
     'patterns': [
       {
         'include': '$self'
@@ -194,14 +189,14 @@
     'name': 'markup.heading.doconce punctuation.definition.heading.doconce'
     'beginCaptures':
       '1':
-        'name': 'markup.heading.marker.gfm'
+        'name': 'markup.heading.marker.doconce'
       '2':
-        'name': 'markup.heading.space.gfm'
+        'name': 'markup.heading.space.doconce'
     'endCaptures':
       '1':
-        'name': 'markup.heading.space.gfm'
+        'name': 'markup.heading.space.doconce'
       '2':
-        'name': 'markup.heading.marker.gfm'
+        'name': 'markup.heading.marker.doconce'
     'patterns': [
       {
         'include': '$self'
@@ -897,132 +892,34 @@
     'name': 'markup.raw.gfm'
   }
   {
-    'match': '(\\[!)(\\[)([^\\]]*)(\\])((\\()[^\\)]+(\\)))(\\])(((\\()[^\\)]+(\\)))|((\\[)[^\\]]+(\\])))'
+    'match': '[^\\"]?(\\")([^\\"]+)(\\")\\s*:\\s*(\\")([^\\"]+)(\\")[^\\"]?'
     'name': 'link'
     'captures':
       '1':
-        'name': 'punctuation.definition.begin.gfm'
+        'name': 'punctuation.definition.begin.doconce'
       '2':
-        'name': 'punctuation.definition.begin.gfm'
+        'name': 'entity.doconce'
       '3':
-        'name': 'entity.gfm'
+        'name': 'punctuation.definition.end.doconce'
       '4':
-        'name': 'punctuation.definition.end.gfm'
+        'name': 'punctuation.definition.begin.doconce'
       '5':
-        'name': 'markup.underline.link.gfm'
-      '6':
-        'name': 'punctuation.definition.begin.gfm'
-      '7':
-        'name': 'punctuation.definition.end.gfm'
-      '8':
-        'name': 'punctuation.definition.end.gfm'
-      '10':
-        'name': 'markup.underline.link.gfm'
-      '11':
-        'name': 'punctuation.definition.begin.gfm'
-      '12':
-        'name': 'punctuation.definition.end.gfm'
-      '13':
-        'name': 'markup.underline.link.gfm'
-      '14':
-        'name': 'punctuation.definition.begin.gfm'
-      '15':
-        'name': 'punctuation.definition.end.gfm'
+        'name': 'markup.underline.link.doconce'
+	  '6':
+        'name': 'punctuation.definition.end.doconce'
   }
   {
-    'match': '(\\[!)(\\[)([^\\]]*)(\\])((\\[)[^\\)]+(\\]))(\\])(((\\()[^\\)]+(\\)))|((\\[)[^\\]]+(\\])))'
+    'match': '(URL)\\s*:\\s*(\\")([^\\"]+)(\\")[^\\"]?'
     'name': 'link'
     'captures':
       '1':
-        'name': 'punctuation.definition.begin.gfm'
+        'name': 'punctuation.definition.keyword.doconce'
       '2':
-        'name': 'punctuation.definition.begin.gfm'
+        'name': 'punctuation.definition.begin.doconce'
       '3':
-        'name': 'entity.gfm'
-      '4':
-        'name': 'punctuation.definition.end.gfm'
-      '5':
-        'name': 'markup.underline.link.gfm'
-      '6':
-        'name': 'punctuation.definition.begin.gfm'
-      '7':
-        'name': 'punctuation.definition.end.gfm'
-      '8':
-        'name': 'punctuation.definition.end.gfm'
-      '10':
-        'name': 'markup.underline.link.gfm'
-      '11':
-        'name': 'punctuation.definition.begin.gfm'
-      '12':
-        'name': 'punctuation.definition.end.gfm'
-      '13':
-        'name': 'markup.underline.link.gfm'
-      '14':
-        'name': 'punctuation.definition.begin.gfm'
-      '15':
-        'name': 'punctuation.definition.end.gfm'
-  }
-  {
-    'match': '!?(\\[)([^\\]]*)(\\])((\\()[^\\)]+(\\)))'
-    'name': 'link'
-    'captures':
-      '1':
-        'name': 'punctuation.definition.begin.gfm'
-      '2':
-        'name': 'entity.gfm'
-      '3':
-        'name': 'punctuation.definition.end.gfm'
-      '4':
-        'name': 'markup.underline.link.gfm'
-      '5':
-        'name': 'punctuation.definition.begin.gfm'
-      '6':
-        'name': 'punctuation.definition.end.gfm'
-  }
-  {
-    'match': '!?(\\[)([^\\]]*)(\\])((\\[)[^\\]]*(\\]))'
-    'name': 'link'
-    'captures':
-      '1':
-        'name': 'punctuation.definition.begin.gfm'
-      '2':
-        'name': 'entity.gfm'
-      '3':
-        'name': 'punctuation.definition.end.gfm'
-      '4':
-        'name': 'markup.underline.link.gfm'
-      '5':
-        'name': 'punctuation.definition.begin.gfm'
-      '6':
-        'name': 'punctuation.definition.end.gfm'
-  }
-  {
-    'match': '^\\s*(\\[)([^\\]]+)(\\])\\s*:\\s*<([^>]+)>'
-    'name': 'link'
-    'captures':
-      '1':
-        'name': 'punctuation.definition.begin.gfm'
-      '2':
-        'name': 'entity.gfm'
-      '3':
-        'name': 'punctuation.definition.end.gfm'
-      '4':
-        'name': 'markup.underline.link.gfm'
-  }
-  {
-    'match': '^\\s*(\\[)([^\\]]+)(\\])\\s*(:)\\s*(\\S+)'
-    'name': 'link'
-    'captures':
-      '1':
-        'name': 'punctuation.definition.begin.gfm'
-      '2':
-        'name': 'entity.gfm'
-      '3':
-        'name': 'punctuation.definition.end.gfm'
-      '4':
-        'name': 'punctuation.separator.key-value.gfm'
-      '5':
-        'name': 'markup.underline.link.gfm'
+        'name': 'markup.underline.link.doconce'
+	  '4':
+        'name': 'punctuation.definition.end.doconce'
   }
   {
     'match': '^\\s*([*+-])[ \\t]+'
@@ -1164,4 +1061,14 @@
     'match': '^#.*$'
     'name': 'comment.block'
   }
+  {
+    'match': '\\[([A-Za-z0-9\\s\\+\\-]+):\\s*(.*)\\]'
+    'name': 'markup.other.inlinecomment'
+    'captures':
+      '1':
+        'name': 'markup.bold.doconce'
+      '2':
+        'name': 'entity.doconce'
+  }
 ]
+
