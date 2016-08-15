@@ -1,6 +1,6 @@
-# Atom syntax highlighting for Doconce #
+# Atom syntax highlighting for DocOnce #
 
-Adds syntax highlighting and snippets to [Doconce](http://hplgit.github.io/doconce)
+Adds syntax highlighting and snippets to [DocOnce](http://hplgit.github.io/doconce)
 files in Atom.
 
 Contributions are greatly appreciated. Please fork this repository and open a

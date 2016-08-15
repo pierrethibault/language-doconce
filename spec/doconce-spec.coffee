@@ -1,4 +1,4 @@
-describe "Doconce", ->
+describe "DocOnce", ->
   grammar = null
 
   beforeEach ->
