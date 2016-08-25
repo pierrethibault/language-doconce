@@ -110,8 +110,9 @@ module.exports =
     providerName: 'doconce-hyperclick',
     wordRegExp: /# #include "(.*)"/,
     getSuggestionForWord: (textEditor, text, range) ->
-      range: range, 
-      callback: ->
-        basedir = path.dirname(textEditor.getPath());
-        filename = text.replace(/# #include "(.*)"/, '$1')
-        atom.workspace.open path.resolve(basedir, filename)
+      if range.start != range.end && textEditor.getGrammar().scopeName.startsWith("source.doconce")
+        range: range,
+        callback: ->
+          basedir = path.dirname(textEditor.getPath());
+          filename = text.replace(/# #include "(.*)"/, '$1')
+          atom.workspace.open path.resolve(basedir, filename)
