@@ -185,7 +185,7 @@
   }
   {
     'begin': '^(\_{2})(\\s*)'
-    'end': '(\\s*)(\_{2})$'
+    'end': '(\\s*)(\_{2})'
     'name': 'markup.heading.doconce punctuation.definition.heading.doconce'
     'beginCaptures':
       '1':
@@ -1071,4 +1071,3 @@
         'name': 'entity.doconce'
   }
 ]
-
