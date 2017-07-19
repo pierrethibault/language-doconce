@@ -538,7 +538,7 @@
     'beginCaptures':
       '0':
         'name': 'entity.name.tag.block.any.doconce'
-    'end': '^\!ec\\s*$'
+    'end': '^\!ec.*?$'
     'endCaptures':
       '0':
         'name': 'entity.name.tag.block.any.doconce'
