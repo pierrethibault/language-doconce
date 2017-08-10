@@ -885,12 +885,28 @@
       '0':
         'name': 'entity.name.tag.block.any.doconce'
     'name': 'markup.raw.gfm'
-  }
+  },
   {
-    'begin': '(`+)(?!$)'
-    'end': '\\1'
-    'name': 'markup.raw.gfm'
-  }
+    'begin': '``'
+    'end': '\'\''
+    'name': 'string.quoted.double.doconce'
+  },
+    {
+      'begin': '(\\$\\{)'
+      'beginCaptures':
+        '1':
+          'name': 'punctuation.definition.keyword.mako.doconce'
+      'end': '(\\})'
+      'endCaptures':
+        '1':
+          'name': 'punctuation.definition.keyword.mako.doconce'
+      'name': 'markup.code.mako.doconce'
+      'patterns': [
+        {
+          'include': 'source.python'
+        }
+      ]
+    }
   {
     'match': '[^\\"]?(\\")([^\\"]+)(\\")\\s*:\\s*(\\")([^\\"]+)(\\")[^\\"]?'
     'name': 'link'
@@ -977,12 +993,20 @@
     'name': 'comment.block.gfm'
   }
   {
-    'begin': '<%'
-    'captures':
-      '0':
-        'name': 'punctuation.definition.comment.gfm'
-    'end': '\\s*%>'
-    'name': 'comment.block.doconce'
+    'begin': '(<%)'
+    'beginCaptures':
+      '1':
+        'name': 'punctuation.definition.keyword.mako.doconce'
+    'end': '(\\s*%>)'
+    'endCaptures':
+      '1':
+        'name': 'punctuation.definition.keyword.mako.doconce'
+    'name': 'markup.code.mako.doconce'
+    'patterns': [
+      {
+        'include': 'source.python'
+      }
+    ]
   }
   {
     'begin': '^\\|'
