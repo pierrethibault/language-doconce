@@ -891,6 +891,11 @@
     'end': '\'\''
     'name': 'string.quoted.double.doconce'
   },
+  {
+    'begin': '`'
+    'end': '`'
+    'name': 'markup.raw.doconce'
+  },
     {
       'begin': '(\\$\\{)'
       'beginCaptures':
